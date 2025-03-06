@@ -1,23 +1,23 @@
 # Eliza
 
-## Edit the character files
+## （可选）调整默认角色文件
 
 Open `agent/src/character.ts` to modify the default character. Uncomment and edit.
 
-### Custom characters
+### 启动角色（已经模仿好的角色是DePIN_News.json）
 
 To load custom characters instead:
 - Use `pnpm start --characters="path/to/your/character.json"`
 - Multiple character files can be loaded simultaneously
 
-### Add clients
+### 添加客户端
 
 ```diff
 - clients: [],
 + clients: ["twitter", "discord"],
 ```
 
-## Duplicate the .env.example template
+## 复制 .env.example 
 
 ```bash
 cp .env.example .env
@@ -25,7 +25,7 @@ cp .env.example .env
 
 \* Fill out the .env file with your own values.
 
-### Add login credentials and keys to .env
+### 在 .env文件中添加登录信息
 
 ```diff
 -DISCORD_APPLICATION_ID=
@@ -44,7 +44,7 @@ cp .env.example .env
 +TWITTER_EMAIL="your@email.com"
 ```
 
-## Install dependencies and start your agent
+## 绑定依赖并启动
 
 ```bash
 pnpm i && pnpm start
